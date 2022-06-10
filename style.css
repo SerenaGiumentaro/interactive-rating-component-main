@@ -1,7 +1,110 @@
-root{
+:root{
     --white: hsl(0, 0%, 100%);
     --light-grey: hsl(217, 12%, 63%);
     --medium-grey:hsl(216, 12%, 54%);
     --dark-blue: hsl(213, 19%, 18%);
     --very--darkblue:hsl(216, 12%, 8%);
+    --primary-font: 'Overpass', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--very--darkblue);
+    color: var(--white);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--primary-font);
+}
+/* container of all elements */
+.rate-state, .thanks{
+    width: 25rem;
+    height: 25rem;
+    background: var(--dark-blue);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+/* container rate elements */
+.container-rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.star, .rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:hsl(213, 16%, 22%);
+}
+.star{
+    margin: 1.5rem;
+}
+.rating, #submit{
+    cursor: pointer;
+}
+.rating:hover{
+    background: var(--light-grey);
+}
+
+/* container caption elements */
+.caption, .caption-thanks{
+    padding: 10px;
+    line-height: 25px;
+    margin: 0 0 1rem 1.5rem;
+}
+.caption p, .caption-thanks p{
+    color: var(--light-grey);
+    font-weight: 400;
+}
+h1, h2{
+    margin-bottom: .5rem;
+    font-size: 1.8rem;
+}
+/* button call to action */
+#submit{
+    background:hsl(25deg 97% 53%);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    width: 356px;
+    align-self: center;
+    border-radius: 30px;
+    border: none;
+    padding: .8rem;
+    margin: 2rem 0;
+    letter-spacing: 2px;
+    font-family: var(--primary-font);
+}
+#submit:hover{
+    color: hsl(25deg 97% 53%);
+    background: var(--white);
+}
+/* rate choosen class */
+.rate-choosen{
+    background:hsl(25deg 97% 53%);
+    pointer-events: none;
+}
+/* section thanks  */
+.caption-thanks{
+    text-align: center;
+}
+.thanks{
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+}
+.rate-text{
+    padding: .5rem;
+    background:hsl(213, 16%, 22%);
+    color: hsl(25deg 97% 53%);
+    border-radius: 20px;
 }
