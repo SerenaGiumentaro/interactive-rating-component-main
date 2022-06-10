@@ -100,11 +100,14 @@ h1, h2{
 .thanks{
     justify-content: space-evenly;
     align-items: center;
-    display: none;
 }
 .rate-text{
     padding: .5rem;
     background:hsl(213, 16%, 22%);
     color: hsl(25deg 97% 53%);
     border-radius: 20px;
+}
+/* for hiding elements  */
+.hidden{
+    display: none;
 }
